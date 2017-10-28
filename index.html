@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <title>大白</title>
+        <style>
+            body { 
+                background-color: darkgray
+            }
+            #baymax {
+                margin: 0 auto;
+                height: 600px;
+            }
+            .head {
+                background-color:white;
+                height:64px;
+                width:100px;
+                border-radius: 50%;
+                margin: 0 auto;
+                border-bottom : 5px solid lightgray;
+                position: relative;
+                z-index: 10;
+            }
+            .eye-left{
+                width:10px;
+                height:13px;
+                background-color: black;
+                border-radius: 50%;
+                position: absolute;
+                left:25px;
+                top:30px;
+            }
+            .eye-right{
+                width:10px;
+                height:13px;
+                background-color: black;
+                border-radius: 50%;
+                position: absolute;
+                right:25px;
+                top:30px;
+            }
+            .mouth{
+                top:35px;
+                height:2px;
+                left:35px;
+                width:40px;
+                background-color: black;
+                position: absolute;
+            }
+            .body{
+                margin: -20 auto;
+                height: 200px;
+                width: 180px;
+                background-color: white;
+                border-radius: 45%;
+                border: 5px solid lightgray;
+                position: relative;
+            }
+            .belly{
+                height: 300px;
+                width: 250px;
+                background-color: white;
+                border-radius: 45%;
+                border: 5px solid lightgray;
+                margin: -140px auto;
+                border-top:none;
+                position: relative;
+            }
+            .cover {
+                width: 190px;
+                background:white;
+                height: 150px;
+                margin: 0 auto;
+                position: relative;
+                top: -20px;
+                border-radius: 50%;
+            }
+            .left-arm{
+                height: 270px;
+                width: 120px;
+                border-radius: 50%;
+                background: white;
+                position: absolute;
+                left:-80px;
+                top:30px;
+                transform: rotate(20deg);
+                z-index: -1;
+            }
+            .right-arm{
+                height: 270px;
+                width: 120px;
+                border-radius: 50%;
+                background: white;
+                position: absolute;
+                right:-80px;
+                top:30px;
+                transform: rotate(-20deg);
+                z-index: -1;
+            }
+            .left-leg{
+                position: absolute;
+                background-color: white;
+                height: 170px;
+                width: 90px;
+                border-radius: 40% 30% 5% 45%;
+                top:240px;
+                left:30px;
+                transform: rotate(-1deg);
+                z-index:-1;
+            }
+            .right-leg{
+                position: absolute;
+                background-color: white;
+                height: 170px;
+                width: 90px;
+                border-radius: 40% 30% 45% 5%;
+                top:240px;
+                right:30px;
+                transform: rotate(1deg);
+                z-index:-1;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="baymax">
+            <div class="head">
+                <div class="eye-right"></div>
+                <div class="eye-left"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="body">
+                <div class="left-arm"></div>
+                <div class="right-arm"></div>
+            </div>
+            <div class="belly">
+                <div class="cover"></div>
+                <div class="left-leg"></div>
+                <div class="right-leg"></div>
+            </div> 
+        </div>
+    </body>
+</html>
