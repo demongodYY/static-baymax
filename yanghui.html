@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>yanghui</title>
+    </head>
+    <style>
+        body{
+            text-align: center;
+            font-size: 24px;
+            line-height: 1rem;
+            margin-top: 3rem;
+        }
+        h2 {
+            opacity: 1;
+        }
+    </style>
+    <body>
+        <h1>求取杨辉三角</h1>
+        <div>
+            <input type="text" name="lineNum" value="5"/>
+            <button onclick="initYangHui()">求取</button>
+            <button onclick="nextYangHui()">求取下一行</button>
+        </div>
+        <div id="container">
+        </div>
+        <script>
+                function initYangHui() {
+                    var container = document.getElementById("container");
+                    container.innerHTML="";
+                    var num = document.getElementsByName("lineNum")[0].value;
+                    for(var i = 0 ;i< num; i++){
+                        var array = document.getElementsByTagName("h2");
+                        var arrayLength = array.length;
+                        var newLine = document.createElement('h2');
+                        var newLineText = "1";
+                        if (arrayLength > 0){
+                            var lineArray = array[arrayLength-1].innerText.split(" ");
+    
+                            for(var j = 0; j<(lineArray.length-1); j++){
+                                var sum = 1*lineArray[j] + 1*lineArray[j+1];
+                                newLineText = newLineText + " " + sum; 
+                            }
+                            newLineText = newLineText + " " + "1";
+                        }
+                        newLine.innerText = newLineText;
+                        container.appendChild(newLine);
+                    }
+                }
+                function nextYangHui() {
+                    var container = document.getElementById("container");
+                    var num = 1;
+                    for(var i = 0 ;i< num; i++){
+                        var array = document.getElementsByTagName("h2");
+                        var arrayLength = array.length;
+                        var newLine = document.createElement('h2');
+                        var newLineText = "1";
+                        if (arrayLength > 0){
+                            var lineArray = array[arrayLength-1].innerText.split(" ");
+    
+                            for(var j = 0; j<(lineArray.length-1); j++){
+                                var sum = 1*lineArray[j] + 1*lineArray[j+1];
+                                newLineText = newLineText + " " + sum; 
+                            }
+                            newLineText = newLineText + " " + "1";
+                        }
+                        newLine.innerText = newLineText;
+                        container.appendChild(newLine);
+                    }
+                }
+            </script>
+    </body>
+</html>
